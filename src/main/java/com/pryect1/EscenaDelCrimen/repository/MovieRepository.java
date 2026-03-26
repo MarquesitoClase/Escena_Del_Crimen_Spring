@@ -11,5 +11,7 @@ import java.util.Optional;
 public interface MovieRepository extends JpaRepository<Movie, Long> {
     List<Movie> findAll();
     Optional<Movie> findByID(Long id);
-    Optional<Movie> findByTitle();
+    Optional<Movie> findByTitle(String Title);
+    void deleteById(Long id);
+    void addMovie(Movie movie);
 }

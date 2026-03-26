@@ -1,5 +1,6 @@
 package com.pryect1.EscenaDelCrimen;
 
+import com.pryect1.EscenaDelCrimen.model.Movie;
 import com.pryect1.EscenaDelCrimen.repository.MovieRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +17,8 @@ public class EscenaDelCrimenApplication {
 
 	@Bean
 	public CommandLineRunner innitData(MovieRepository mR){
-		mR.add
+		return args -> {
+			mR.save(new Movie())
+		}
 	}
 }
