@@ -8,7 +8,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name = "movies")
+@Table(name = "films")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
