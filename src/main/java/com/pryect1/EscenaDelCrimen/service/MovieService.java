@@ -25,7 +25,7 @@ public class MovieService {
         return movieRepository.save(newMovie);
     }
 
-    public void deleteMovie(int id){
+    public void deleteMovie(Long id){
         movieRepository.deleteById(id);
     }
 
