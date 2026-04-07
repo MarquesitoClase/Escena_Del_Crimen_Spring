@@ -29,7 +29,7 @@ public class MovieController {
     }
 
     @DeleteMapping("/novies/{id")
-    public void deleteMovie(@PathVariable int id){
+    public void deleteMovie(@PathVariable Long id){
         movieService.deleteMovie(id);
     }
 }

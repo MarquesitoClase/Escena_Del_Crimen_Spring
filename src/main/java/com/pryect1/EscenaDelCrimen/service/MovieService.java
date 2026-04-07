@@ -29,7 +29,7 @@ public class MovieService {
         movieRepository.deleteById(id);
     }
 
-    public Movie updateMovie(int id, Movie updatedMovie){
+    public Movie updateMovie(Long id, Movie updatedMovie){
         updatedMovie.setId(id);
         return movieRepository.save(updatedMovie);
     }

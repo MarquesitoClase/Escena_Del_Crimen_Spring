@@ -17,8 +17,8 @@ public class EscenaDelCrimenApplication {
 	@Bean
 	public CommandLineRunner innitData(MovieRepository mR){
 		return args -> {
-			mR.save(new Movie(0, "007: El mañana nunca muere"));
-			mR.save(new Movie(1, "Star wars: El poder de la fuerza"));
+			mR.save(new Movie(0L, "007: El mañana nunca muere"));
+			mR.save(new Movie(1L, "Star wars: El poder de la fuerza"));
 		};
 	}
 }
