@@ -82,7 +82,7 @@ public class Movie {
         return filmaffinity_score;
     }
 
-    public void setFilmaffinity_score(double filmaffinity_score) {
+    public void setFilmaffinity_score(Double filmaffinity_score) {
         this.filmaffinity_score = filmaffinity_score;
     }
 
