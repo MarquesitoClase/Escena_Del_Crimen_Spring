@@ -14,7 +14,7 @@ public class Movie {
     private String director;
     private String main_cast;
     @Column(name = "film_affinity_score")
-    private double filmaffinity_score;
+    private Double filmaffinity_score;
     private String description;
     private String img;
     private String url;
