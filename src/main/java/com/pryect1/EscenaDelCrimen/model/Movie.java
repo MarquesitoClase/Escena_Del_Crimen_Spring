@@ -78,7 +78,7 @@ public class Movie {
         this.main_cast = main_cast;
     }
 
-    public double getFilmaffinity_score() {
+    public Double getFilmaffinity_score() {
         return filmaffinity_score;
     }
 
