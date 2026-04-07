@@ -1,9 +1,6 @@
 package com.pryect1.EscenaDelCrimen.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,15 +11,13 @@ import lombok.Setter;
 @Table(name = "movies")
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Movie {
     @Id
-    @GeneratedValue
-    @Setter
-    @Getter
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    @Setter
-    @Getter
     private String Title;
 
 }

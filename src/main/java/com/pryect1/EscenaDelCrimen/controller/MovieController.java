@@ -1,26 +1,35 @@
 package com.pryect1.EscenaDelCrimen.controller;
 
+import com.pryect1.EscenaDelCrimen.model.Movie;
+import com.pryect1.EscenaDelCrimen.repository.MovieRepository;
+import com.pryect1.EscenaDelCrimen.service.MovieService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class MovieController {
-    /*
-    <Route path="/avisos-legales" element={<AvisosLegales />} />
-          <Route path="/terminos-uso" element={<TerminosUso />} />
-          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-          <Route path="/politicas-de-privacidad" element={<PoliticasPrivacidad />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="/addMoviesPage" element={<AddFilmPage />} />
-          <Route path="/ubicacion" element={<UbicationPage />} />
-          <Route path="/admin" element={<Formulario />} />
-     */
-    @GetMapping("/")
-    public String getHome(){
-        return "home";
+
+    MovieService movieService;
+
+    public MovieController(MovieService movieService) {
+        this.movieService = movieService;
     }
-    @GetMapping("/avisosLegales")
-    public String avisosLegales(){
-        return "avisosLegales";
+
+    @GetMapping("/movies")
+    public void createMovie(@RequestBody Movie movie){
+         movieService.addMovie(movie);
+    }
+
+    @PostMapping("/movies")
+    public List<Movie> getAllMovies(){
+        return movieService.getAll();
+    }
+
+    @DeleteMapping("/novies/{id")
+    public void deleteMovie(@PathVariable int id){
+        movieService.deleteMovie(id);
     }
 }
