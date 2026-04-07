@@ -14,11 +14,11 @@ public class EscenaDelCrimenApplication {
 		SpringApplication.run(EscenaDelCrimenApplication.class, args);
 	}
 
-
 	@Bean
 	public CommandLineRunner innitData(MovieRepository mR){
 		return args -> {
-			mR.save(new Movie())
-		}
+			mR.save(new Movie(0, "007: El mañana nunca muere"));
+			mR.save(new Movie(1, "Star wars: El poder de la fuerza"));
+		};
 	}
 }
